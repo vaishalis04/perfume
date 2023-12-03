@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="stylesheets/registration.css"> -->
+</head>
+<style>
+   
+
+.container {
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 98px 40px;
+    background-color: #DD2F6E;
+    background-image: url(https://media.istockphoto.com/id/1332536749/photo/a-computer-futuristic-software-digital-hud-interface-of-the-future-with-a-control-system-for.webp?b=1&s=170667a&w=0&k=20&c=z55LpgHJ6oL7IRQ-Lbov-cJQAgesPOmQgqm-usL-y5o=);
+    
+    
+}
+.registration-form {
+    width: 80%;
+    background-color: #000201;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #eae8e8;
+}
+
+.registration-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #24ADBC;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #000201;
+    color: #24ADBC;
+}
+
+a >.btn {
+    background-color: #24ADBC;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+a>.btn:hover {
+    background-color: #0a464d;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+a {
+    color: #DD2F6E;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+</style>
+<body>
+   
+    <div class="navbar">
+    <%- include("partials/navAdmin.ejs")%>
+</div>
+
+
+    <div class="container">
+        <div class="registration-form">
+            <h1>Register your product</h1>
+            <form action="registration" method="POST">
+                <div class="form-group">
+                    <input type="text"  name="products" placeholder="product-name" >
+                </div>
+                <div class="form-group">
+                    <input type="text"  name="description" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <input type="text"  name="imageLink" placeholder="Enter imageLink" >
+                </div>
+                <div class="form-group">
+                    <input type="number"  name="price" placeholder="price" >
+                </div>
+                <a href="/welcome"><button type="submit" class="btn">Submit</button></a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

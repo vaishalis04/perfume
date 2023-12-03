@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cards">
+        <% perfumes.forEach(function(perfume) { %>
+     <div class="card">
+         <img src="<%= perfume.imageLink%>" alt="Card Image">
+         <div class="card-content">
+             <h2 class="card-title"><%=perfume.products%></h2>
+             <p class="card-description"><%=perfume.description%></p>
+             <h3 class="card-head3"><%=perfume.price%></h3>
+             <div class="button">
+             <a href="/buy" class="card-button">Buy</a>
+             <a href="/cart" class="card-button">Cart</a>
+         </div>
+         </div>
+     </div>
+ <% }); %>
+ </div>
+</body>
+</html>

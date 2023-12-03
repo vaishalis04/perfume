@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      body{
+        height: 100%;
+        width: 100%;
+        background-image: url(https://media.istockphoto.com/id/1332536749/photo/a-computer-futuristic-software-digital-hud-interface-of-the-future-with-a-control-system-for.webp?b=1&s=170667a&w=0&k=20&c=z55LpgHJ6oL7IRQ-Lbov-cJQAgesPOmQgqm-usL-y5o=);
+
+        background-color: #000201;
+      }
+  
+
+     
+      
+        table {
+          
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            border: 3px solid #ccc;
+
+        border-radius: 40px;
+
+        }
+
+        th, td {
+            border: 3px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #000201;
+           color: #24ADBC;
+        }
+
+        tr:nth-child(even) {
+            background-color: #000201;
+           color: #24ADBC;
+
+        }
+        
+        tr:nth-child(odd) {
+            background-color: #000201;
+           color: #24ADBC;
+
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/navAdmin")%>
+    <div class="container">
+    <table>
+        <tr>
+            <th>Products</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Delete</th>
+            <th>Update</th>
+
+
+        </tr>
+        <div class="tables">
+            <% perfumes.forEach(function(perfume,idx){ %>
+
+           
+        <tr>
+            <td><%= perfume.products%></td>
+            <td><%= perfume.description%></td>
+            <td><%= perfume.price%></td>
+            <td> <a href="/delete/<%=idx%>">❌</a></td>
+            <td> <a href="/update/<%=idx%>">📝</a></td>
+
+
+        </tr>
+    </div>
+<% }) %>
+       
+    </table>
+</div>
+</body>
+</html>

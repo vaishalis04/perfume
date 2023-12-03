@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        background-color: #F2CFD0;
+     border-radius: 15px;
+    }
+    .left{
+        width: 50%;
+    }
+    .left img{
+width: 100%;
+height: 100%;
+    }
+    .right{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right form {
+
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .right form h2{
+            text-align: center;
+            color: #ff9598;
+        }
+        .right label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .right input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .card-button{
+            background-color: #F2CFD0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+
+        .card-button {
+            background-color: #ff9598;
+        }
+</style>
+<body>
+    <%- include("partials/nav.ejs") %>
+  <%- include("partials/nav2.ejs") %>
+  
+    <div class="container">
+        
+        <div class="left">
+            <img src="https://media.istockphoto.com/id/1397788158/photo/face-or-body-care-cosmetic-product-bottle-on-pink-background.webp?b=1&s=170667a&w=0&k=20&c=sHMVr0kUyBJYMvn4EQrMcyZbdbn8jMV6nvIdLVwoNTM=" alt="">
+        </div>
+       
+
+        <div class="right">
+            <form>
+                <h2>SignIn Form</h2>
+        
+                <label for="email">Email:</label>
+                <input type="email"  name="email" >
+        
+                <label for="password">Password:</label>
+                <input type="password"  name="password" >
+        
+                <a href="/" class="card-button">Submit</a>
+
+            </form>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- views/cart.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <h2>Perfumes</h2>
+  <ul>
+    <% perfumes.forEach(perfume => { %>
+      <li>
+        <%= perfume.products %> - $<%= perfume.price %>
+        <form action="/cart" method="post" style="display:inline;">
+          <input type="hidden" name="perfumeId" value="<%= perfume.id %>">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+  <h2>Cart</h2>
+  <ul>
+    <% carts.forEach(perfume => { %>
+      <li><%= products.name %> - $<%= item.price %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

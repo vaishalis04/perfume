@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfumes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<style>
+  
+  .carousel-inner{
+      height: 300px;
+  }
+  
+  .item, img{
+      height: 100% ;
+      width:  100% ;
+      border: 1px solid rgb(12, 12, 12);
+  }
+  /* Reset some default styles */
+body, h1, h2, p, img, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    /* background-color: #333; */
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the container for influencers */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 20px; */
+    flex-wrap: wrap;
+    white-space: no wrap;
+}
+
+/* Style each influencer card */
+.influencer {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.influencer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.influencer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.influencer p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.influencer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.influencer a:hover {
+    text-decoration: underline;
+}
+    body, h1, h2, p, img {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Style the header */
+    header1 >h1 {
+        background-color: #04007C;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    /* Style the container for content and image */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+    
+    /* Style the about content */
+    .about-content {
+        flex-basis: calc(50% - 20px);
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Style the about image */
+    .about-image {
+        flex-basis: calc(50% - 20px);
+    }
+    
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    body, h1, h2, p, img {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Style the header */
+    header {
+        background-color: #04007C;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    /* Style the container for services */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+    
+    /* Style each service block */
+    .service {
+        flex-basis: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .service h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    
+    .service p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    
+    
+    
+
+</style>
+<body>
+  <%- include("partials/nav.ejs") %>
+  <%- include("partials/nav2.ejs") %>
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://in.ajmalperfume.com/cdn/shop/files/Fragrance_Guide_1220_x_335_px_01.png?v=1638860909" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/01f07878e0a735b8.jpg?q=20" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/ee78de50f9dbe993.jpg?q=20" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <header>
+    <h1>Meet Our Influencers</h1>
+</header>
+<div class="container">
+    <div class="influencer">
+        <img src="https://images.unsplash.com/photo-1582623105708-852ab5726148?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Influencer 1">
+        <h2>Influencer 1</h2>
+        <p>Follow me on social media for fashion and lifestyle inspiration!</p>
+        <a href="https://instagram.com/influencer1" target="_blank">Instagram</a>
+    </div>
+    <div class="influencer">
+        <img src="https://images.unsplash.com/photo-1577899877811-35c27d5d7f12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Influencer 2">
+        <h2>Influencer 2</h2>
+        <p>Exploring the world, one adventure at a time. Join me on my travels!</p>
+        <a href="https://twitter.com/influencer2" target="_blank">Twitter</a>
+    </div>
+    <div class="influencer">
+        <img src="https://images.unsplash.com/photo-1522765438697-bbbcc76e8614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Influencer 3">
+        <h2>Influencer 3</h2>
+        <p>Food lover and chef extraordinaire. Check out my recipes and culinary adventures!</p>
+        <a href="https://facebook.com/influencer3" target="_blank">Facebook</a>
+    </div>
+</div>
+<div class="container">
+  <div class="influencer">
+      <img src="https://images.unsplash.com/photo-1441123694162-e54a981ceba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZlbWFsZSUyMGluZmx1ZW5jZXIlMjBwZXJmdW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Influencer 1">
+      <h2>Influencer 1</h2>
+      <p>Follow me on social media for fashion and lifestyle inspiration!</p>
+      <a href="https://instagram.com/influencer1" target="_blank">Instagram</a>
+  </div>
+  <div class="influencer">
+      <img src="https://images.unsplash.com/photo-1494354145959-25cb82edf23d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="Influencer 2">
+      <h2>Influencer 2</h2>
+      <p>Exploring the world, one adventure at a time. Join me on my travels!</p>
+      <a href="https://twitter.com/influencer2" target="_blank">Twitter</a>
+  </div>
+  <div class="influencer">
+      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZlbWFsZSUyMGluZmx1ZW5jZXIlMjBwZXJmdW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Influencer 3">
+      <h2>Influencer 3</h2>
+      <p>Food lover and chef extraordinaire. Check out my recipes and culinary adventures!</p>
+      <a href="https://facebook.com/influencer3" target="_blank">Facebook</a>
+  </div>
+</div>
+<header1>
+  <h1>About Us</h1>
+</header1>
+<div class="container">
+  <div class="about-content">
+      <h2>Our Story</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula justo in lectus sollicitudin dignissim.</p>
+      <p>Quisque tincidunt ipsum nec urna tristique, at tincidunt nulla scelerisque. Integer tristique ut odio sit amet.</p>
+      <p>Suspendisse potenti. Nam vehicula, libero et fringilla imperdiet, leo nulla ullamcorper mi, nec feugiat neque eros.</p>
+  </div>
+  <div class="about-image">
+      <img src="https://plus.unsplash.com/premium_photo-1661274209157-118069b926f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Our Team">
+  </div>
+</div>
+<header>
+  <h1>Our Services</h1>
+</header>
+<div class="container">
+  <div class="service">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Service 1">
+      <h2>Service 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula justo in lectus sollicitudin dignissim.</p>
+  </div>
+  <div class="service">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VydmljZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Service 2">
+      <h2>Service 2</h2>
+      <p>Quisque tincidunt ipsum nec urna tristique, at tincidunt nulla scelerisque. Integer tristique ut odio sit amet.</p>
+  </div>
+  <div class="service">
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNlcnZpY2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Service 3">
+      <h2>Service 3</h2>
+      <p>Suspendisse potenti. Nam vehicula, libero et fringilla imperdiet, leo nulla ullamcorper mi, nec feugiat neque eros.</p>
+  </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
+
+</body>
+</html>

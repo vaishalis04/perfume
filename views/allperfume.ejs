@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <style>
+        /* Card container styles */
+        h1{
+            text-align: center;
+        }
+        .cards{
+            display: flex;
+            /* justify-content: space-evenly; */
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            overflow: hidden;
+           
+    }
+    /* .cards :hover{
+       transform: scale(1, 4);
+    } */
+    .card-head3 {
+        color: rgb(8, 165, 8);
+    }
+
+        /* Card image styles */
+        .card img {
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+        }
+
+        /* Card content styles */
+        .card-content {
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        /* Card title styles */
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Card description styles */
+        .card-description {
+            font-size: 16px;
+            color: #252525;
+            margin-bottom: 10px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* Card button styles */
+        .card-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/nav.ejs") %>
+    <%- include("partials/nav2.ejs") %>
+    <h1>Explore Our Products</h1>
+    <div class="cards">
+       <% perfumes.forEach(function(perfume) { %>
+    <div class="card">
+        <img src="<%= perfume.imageLink%>" alt="Card Image">
+        <div class="card-content">
+            <h2 class="card-title"><%=perfume.products%></h2>
+            <p class="card-description"><%=perfume.description%></p>
+            <h3 class="card-head3"><%=perfume.price%></h3>
+            <div class="button">
+            <a href="/buy" class="card-button">Buy</a>
+            <a href="/cart" class="card-button">Cart</a>
+        </div>
+        </div>
+    </div>
+<% }); %>
+</div>
+<%- include("partials/footer.ejs") %>
+
+</body>
+</html>
